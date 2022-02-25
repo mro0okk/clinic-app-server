@@ -1,0 +1,9 @@
+/node_modules
+/vendor
+/.idea
+.idea/
+/.sequelizerc
+config.json
+.env
+/package-lock.json
+CACHE
