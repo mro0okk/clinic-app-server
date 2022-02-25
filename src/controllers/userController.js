@@ -41,8 +41,8 @@ export const handleGetAllUser = async (req, res) => {
 //------------------------------------
 //create user for Client
 export const handleCreateUser = async (req, res) => {
+  const message = await createUser(req.body)
   if (req.body) {
-    const message = await createUser(req.body)
     return res.status(200).json(message)
   } else {
     return res.status(204).json(message)
@@ -65,6 +65,7 @@ export const handleEditUser = async (req, res) => {
 //delete user for client
 export const handleDeleteUser = async (req, res) => {
   const data = req.body
+  console.log(req)
   if (!data.id || !data.firstName || !data.lastName) {
     return res.status(200).json({
       errCode: 1,
